@@ -54,6 +54,7 @@
                 <div class="box-login">
                     <form action="{{route('painel.editar.post')}}" method="POST">
                     {{csrf_field()}}
+                    <h2 style="text-align:center;">Edite a Pessoa</h2>
                     <label for="">Nome</label>
                         <input type="text" name="nome" placeholder="Seu Email de login..." value="{{$nome}}"/>
                         <label for="">Idade</label>

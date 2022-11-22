@@ -64,8 +64,11 @@
             <div class="container">
                 <div class="box-login">
                     <form method="POST">
+                        <h2 style="text-align:center;">Realize o login</h2>
                     {{csrf_field()}}
+                    <label for="">Email</label>
                         <input type="email" name="email" placeholder="Seu Email de login..."/>
+                        <label for="">Senha</label>
                         <input type="password" name="senha" placeholder="Sua Senha..."/>
                         <input type="submit" name="logar" value="Entrar"/>
                     </form>
