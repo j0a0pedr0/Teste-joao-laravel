@@ -104,8 +104,8 @@
                             <tr>
                                 <td>{{$cliente->nome}}</td>
                                 <td>{{$cliente->idade}}</td>
-                                <td style="text-align:center;"><a href="http://localhost/teste-joao-app/public/painel/editar/{{$cliente->id_pessoa}}/{{$cliente->id_usuario}}">Editar</a></td>
-                                <td style="text-align:center;"><a href="http://localhost/teste-joao-app/public/painel/excluir/{{$cliente->id_pessoa}}/{{$cliente->id_usuario}}">Excluir</a></td>
+                                <td style="text-align:center;"><a href="<?php echo INCLUDE_PATH; ?>painel/editar/{{$cliente->id_pessoa}}/{{$cliente->id_usuario}}">Editar</a></td>
+                                <td style="text-align:center;"><a href="<?php echo INCLUDE_PATH; ?>painel/excluir/{{$cliente->id_pessoa}}/{{$cliente->id_usuario}}">Excluir</a></td>
                             </tr>
                             @endforeach    
                             

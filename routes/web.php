@@ -14,6 +14,8 @@ use App\Http\Controllers\PessoaController;
 |
 */
 session_start();
+//POR FAVOR MUDAR PARA DIRETÒRIO DE SUA MAQUINHA
+define('INCLUDE_PATH','http://localhost/teste-joao-app/public/');
 Route::get('/', function () {
     return view('login');
 });

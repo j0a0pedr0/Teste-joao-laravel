@@ -40,7 +40,7 @@
 
                 if($retorno){
                    //print_r($senha->id_usuario);
-                    echo '<script>location.href="http://localhost/teste-joao-app/public/painel/'.$senha->id_usuario.'"</script>';
+                    echo '<script>location.href="'.INCLUDE_PATH.'painel/'.$senha->id_usuario.'"</script>';
                 }else{
                     return view('login');
                 }
@@ -68,7 +68,7 @@
                 $pessoa->id_usuario = $id_usuario;
                 $pessoa->save();
                 echo '<script>alert("Cliente Cadastrado Com Sucesso!!!")</script>';
-                echo '<script>location.href="http://localhost/teste-joao-app/public/painel/'.$id_usuario.'"</script>';
+                echo '<script>location.href="'.INCLUDE_PATH.'painel/'.$id_usuario.'"</script>';
             }
         }
 
@@ -76,7 +76,7 @@
             $pessoa = new pessoa;
             $pessoa->where('id_pessoa',$id)->delete();
             echo '<script>alert("Deletado com sucesso!!!")</script>';
-            echo '<script>location.href="http://localhost/teste-joao-app/public/painel/'.$id_usuario.'"</script>';
+            echo '<script>location.href="'.INCLUDE_PATH.'painel/'.$id_usuario.'"</script>';
         }
 
         public function editar_pessoa($id,$id_usuario){
@@ -99,14 +99,14 @@
                 $pessoa = new Pessoa();
                 $pessoa->where('id_pessoa',$id_pessoa)->update(['nome'=>"$nome",'idade'=>"$idade"]);
                 echo '<script>alert("Pessoa atualizada com sucesso!!!")</script>';
-                echo '<script>location.href="http://localhost/teste-joao-app/public/painel/'.$id_usuario.'"</script>';
+                echo '<script>location.href="'.INCLUDE_PATH.'painel/'.$id_usuario.'"</script>';
             }
         }
 
         public function sair_pessoa(){
             session_destroy();
             echo '<script>alert("Saindo do Perfil!!!")</script>';
-            echo '<script>location.href="http://localhost/teste-joao-app/public/"</script>';
+            echo '<script>location.href="'.INCLUDE_PATH.'"</script>';
         }
 	}
 ?>
